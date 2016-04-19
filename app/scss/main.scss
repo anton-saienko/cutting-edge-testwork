@@ -202,7 +202,7 @@ display:table;
 /* ------------
 ЗВЕЗДОЧКА
 ------------ */
-canvas {
+#star {
 -webkit-transition-property: -webkit-transform;
 -webkit-transition-duration: 1s;
 -ms-transition-property: -ms-transform;
@@ -211,7 +211,7 @@ transition-property: transform;
 transition-duration: 1s;
 }
 
-canvas:hover {
+#star:hover {
 -webkit-animation:spin 1.5s linear infinite;
 -moz-animation:spin 1.5s linear infinite;
 animation:spin 1.5s linear infinite;
