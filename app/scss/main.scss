@@ -1,6 +1,5 @@
 @import "includes/settings";
 
-
 body {
 background: $bg_color_1;
 background: -moz-linear-gradient(left, $bg_color_1 0%, $bg_color_2  100%);
@@ -18,6 +17,9 @@ min-height:640px;
 	@media screen and (max-width:600px) {max-width:320px;}
 }
 
+/* --------------
+Большой блок
+---------------- */
 .big{
 width:330px;
 height: 330px;
@@ -46,6 +48,9 @@ transform: rotate(-45deg) translate(0px,150px);
 	} 
 }
 
+/* --------------------------
+картинки на бэкграунде
+-------------------------- */
 .image{
 width: 100%;
 height: 100%;
@@ -124,6 +129,9 @@ z-index: 1;
 	}
 }	
 
+/* -------------------
+надписи на блоках
+-------------------- */
 .text{
 display:table-cell;
 vertical-align:middle;
@@ -150,6 +158,9 @@ cursor:pointer;
 	&:hover{font-size:24px;}
 }
 
+/* ------------------
+маленькие блоки
+------------------ */
 .little{
 width:160px;
 height: 160px;
@@ -179,7 +190,7 @@ display:table;
 	&_third{ 
 	transform: rotate(-45deg) translate(85px,695px);
 		@media screen and (max-width:920px) { transform: rotate(-45deg) translate(-425px,695px);}
-		@media screen and (max-width:600px) {    transform: rotate(-45deg) translate(-640px,765px);}
+		@media screen and (max-width:600px) { transform: rotate(-45deg) translate(-640px,765px);}
 	}
 	&_fourth{ 
 	transform: rotate(-45deg) translate(255px,695px);
@@ -188,6 +199,9 @@ display:table;
 	}
 }
 
+/* ------------
+ЗВЕЗДОЧКА
+------------ */
 canvas {
 -webkit-transition-property: -webkit-transform;
 -webkit-transition-duration: 1s;
@@ -206,6 +220,9 @@ animation:spin 1.5s linear infinite;
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { transform:rotate(360deg); } }
 
+/* -------
+ФОРМА
+-------- */
 .form-bg{
 position:absolute;
 display:table;
