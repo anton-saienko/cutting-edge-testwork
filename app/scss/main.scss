@@ -166,6 +166,7 @@ width:160px;
 height: 160px;
 position:absolute;
 display:table;
+overflow:hidden;
 	&:hover{
 		.image_little1:before,
 		.image_little2:before,
