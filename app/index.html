@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Cutting Edge test work</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+  <!-- endbower -->
+	
+	<!-- свои стили -->
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/style.min.css" />
+
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
+	
+	<!-- свои скрипты -->
+	<script type="text/javascript" src="js/common.js"></script>
+	
+</head>
+<body>
+
+	<!--Основные блоки-->
+	<div class="wrapper">
+		<div class="big">
+			<div class="image"></div>
+			<div class="text">ПРИВЕТ МИР</div>
+		</div>
+		<div class="little little_first">
+			<div class="image_little1"></div>
+		</div>
+		<div class="little little_second">
+			<div class="image_little2"></div>
+			<div class="text text_little">
+				<canvas id="star" width=140 height=140></canvas>
+			</div>
+		</div>
+		<div class="little little_third">
+			<div class="image_little3"></div>
+			<div class="text text_little" id="getForm">Click<br>to<br>form</div>
+		</div>
+		<div class="little little_fourth">
+			<div class="image_little4"></div>
+		</div>
+	</div>
+	
+	<!--Форма -->
+	<div class="form-bg">
+		<div class="form-wrapper">
+			<div class="content">
+				<div class="myForm">
+					<label for="name">Имя<input type="text" id="name"></label>
+					<br>
+					<label for="name">Телефон<input type="text" id="name"></label>
+					<button id="next">Далее</button>
+				</div>
+				
+				<div class="circle"></div>
+				<div class="circle__inner"><div class="circle__text">loading</div></div>
+				
+				<div class="thank-you">
+					<div class="thank-you__text">Спасибо текст</div>
+					<div class="close">Закрыть</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+@import "includes/settings";
+
+
+body {
+background: $bg_color_1;
+background: -moz-linear-gradient(left, $bg_color_1 0%, $bg_color_2  100%);
+background: -webkit-linear-gradient(left, $bg_color_1 0%, $bg_color_2  100%);
+background: linear-gradient(to right, $bg_color_1 0%, $bg_color_2 100%);
+min-width:320px;
+	@media screen and (max-width:600px) {height:1234px}
+}
+
+.wrapper{
+margin:0 auto;
+max-width:920px;
+min-height:640px;
+	@media screen and (max-width:920px) {max-width:560px;}
+	@media screen and (max-width:600px) {max-width:320px;}
+}
+
+.big{
+width:330px;
+height: 330px;
+position:absolute;
+display:table;
+overflow:hidden;
+transform: rotate(-45deg) translate(0px,150px);
+	@media screen and (max-width:600px) {
+	width:160px;
+	height: 160px;
+	transform: rotate(-45deg) translate(0px,120px);
+	}
+	&:hover{
+		.image:before{
+		width:500px;
+		height:500px;
+		top: -90px;
+		left: -90px;
+			@media screen and (max-width:600px) {
+			width:330px;
+			height:330px;
+			top: -90px;
+			left: -90px;
+			}
+		}
+	} 
+}
+
+.image{
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+z-index: 1;
+	&:before {
+	content: "";
+	position: absolute;
+	width:470px;
+	height:470px;
+	top: -70px;
+	left: -70px;
+	z-index: -1;
+	background: url(../img/big_image.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	transition:0.3s;
+		@media screen and (max-width:600px) {	
+		width: 290px;
+		height: 290px;
+		}
+	}
+	&_little1{
+		@extend .image;
+		&:before {
+		width: 230px;
+		height: 230px;
+		top: -35px;
+		left: -35px;
+		background: url(../img/little_image_1.png);
+		background-repeat:no-repeat;
+		background-size:cover;
+		}
+	}
+	&_little2{
+		@extend .image;
+		&:before {
+		width: 230px;
+		height: 230px;
+		top: -35px;
+		left: -35px;
+		background: url(../img/little_image_2.png);
+		background-repeat:no-repeat;
+		background-size:cover;
+		}
+	}
+	&_little3{
+		@extend .image;
+		&:before {
+		width: 230px;
+		height: 230px;
+		top: -35px;
+		left: -35px;
+		background: url(../img/little_image_3.png);
+		background-repeat:no-repeat;
+		background-size:cover;
+		}
+	}
+	&_little4{
+		@extend .image;
+		&:before {
+		width: 230px;
+		height: 230px;
+		top: -35px;
+		left: -35px;
+		background: url(../img/little_image_4.png);
+		background-repeat:no-repeat;
+		background-size:cover;
+		}
+	}
+}	
+
+.text{
+display:table-cell;
+vertical-align:middle;
+text-align:center;
+transform: rotate(45deg);
+font-family: $font_1;
+font-size: 44px;
+text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+position:relative;
+z-index:2;
+	@media screen and (max-width:600px) {font-size: 24px;}
+	&_little{
+	font-size:16px;
+	text-shadow:none;
+	}
+	&:hover{
+	color:red;
+	transition:0.3s;
+	}
+}
+
+#getForm{
+cursor:pointer;
+	&:hover{font-size:24px;}
+}
+
+.little{
+width:160px;
+height: 160px;
+position:absolute;
+display:table;
+	&:hover{
+		.image_little1:before,
+		.image_little2:before,
+		.image_little3:before,
+		.image_little4:before,
+		{
+		width: 280px;
+		height: 280px;
+		top: -55px;
+		left: -55px;
+		}
+	} 
+	&_first{ 
+	transform: rotate(-45deg) translate(85px,525px);
+		@media screen and (max-width:920px) {transform: rotate(-45deg) translate(-255px,355px);}
+		@media screen and (max-width:600px) {transform: rotate(-45deg) translate(-160px,285px);}
+	}
+	&_second{ 
+	transform: rotate(-45deg) translate(-85px,525px);
+		@media screen and (max-width:600px) {transform: rotate(-45deg) translate(-320px,445px);}
+	}
+	&_third{ 
+	transform: rotate(-45deg) translate(85px,695px);
+		@media screen and (max-width:920px) { transform: rotate(-45deg) translate(-425px,695px);}
+		@media screen and (max-width:600px) {    transform: rotate(-45deg) translate(-640px,765px);}
+	}
+	&_fourth{ 
+	transform: rotate(-45deg) translate(255px,695px);
+		@media screen and (max-width:920px) {transform: rotate(-45deg) translate(-255px,525px);}
+		@media screen and (max-width:600px) {transform: rotate(-45deg) translate(-480px,605px);}
+	}
+}
+
+canvas {
+-webkit-transition-property: -webkit-transform;
+-webkit-transition-duration: 1s;
+-ms-transition-property: -ms-transform;
+-ms-transition-duration: 1s;
+transition-property: transform;
+transition-duration: 1s;
+}
+
+canvas:hover {
+-webkit-animation:spin 1.5s linear infinite;
+-moz-animation:spin 1.5s linear infinite;
+animation:spin 1.5s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
+.form-bg{
+position:absolute;
+display:table;
+vertical-align:middle;
+text-align:center;
+width:100%;
+height:100%;
+top:0;
+bottom:0;
+display:none;
+}
+
+.form-wrapper{
+background-color: white;
+display:table-cell;
+vertical-align:middle;
+}
+
+.content{
+display:inline-block;
+width:360px;
+height:280px;
+box-shadow:0px 3px 10px 0 rgba(0,0,0,0.7),
+0px -3px 10px 0 rgba(0,0,0,0.7),
+-3px 0 10px 0 rgba(0,0,0,0.7),
+3px 0 10px 0 rgba(0,0,0,0.7);
+}
+
+label{
+float:right;
+margin-right:60px;
+}
+
+input{
+line-height:30px;
+height:30px;
+margin-left:10px;
+margin-top:50px;
+}
+
+#next{
+margin-top: 50px;
+float:right;
+margin-right:75px;
+background-color: $button-color-1;
+color:white;
+padding:10px;
+border:none;
+font-size:16px;
+font-family: $font_1;
+width:170px;
+}
+
+.circle{
+width:110px;
+height:110px;
+border-radius:50%;
+background: linear-gradient(to bottom, #ff7373, #480b0b);
+margin:0 auto;
+margin-top:70px;
+animation-name: rotation;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+display:none;
+}
+
+.circle__inner{
+width:80px;
+height:80px;
+margin:0 auto;
+border-radius:50%;
+background-color:white;
+margin-top:-95px;
+margin-left:140px;
+position:absolute;
+display:table;
+display:none;
+}
+
+.circle__text{
+display:table-cell;
+vertical-align:middle;
+}
+
+@keyframes rotation {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.thank-you__text{
+display:none;
+margin-top:100px;
+font-family: $font_1;
+font-size:36px;
+text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+}
+
+.close{
+display:none;
+font-family: $font_1;
+font-size:36px;
+color: #660000;
+cursor:pointer;
+	&:hover{
+	text-decoration:underline;
+	}
+}
